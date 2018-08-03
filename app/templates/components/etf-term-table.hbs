@@ -1,0 +1,16 @@
+<table class="table">
+  <tbody>
+    {{#each terms as |term|}}
+      <tr>
+        <td class="title-column">
+          {{#link-to 'dictionary.switch.edit' term}}
+            {{highlight-text term.title filter}}
+          {{/link-to}}
+        </td>
+        <td class="desc-column">
+          {{highlight-text term.desc filter}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,22 @@
+etf-input-form {
+  color: white;
+  margin: $main-margin;
+  display: flex;
+  flex-direction: column;
+
+  .button-wrapper {
+    margin-left: auto;
+    margin-bottom: 10px;
+
+    button {
+      width: auto;
+    }
+  }
+
+  .form {
+    input, textarea {
+      width: -webkit-fill-available;
+      resize: vertical;
+    }
+  }
+}

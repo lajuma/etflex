@@ -1,0 +1,12 @@
+etf-search {
+  width: 100%;
+  margin: $main-margin;
+
+  @media screen and (max-width: 480px) {
+    margin: 10px;
+  }
+
+  input {
+    width: -webkit-fill-available;
+  }
+}

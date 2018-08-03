@@ -1,0 +1,22 @@
+<div class="form">
+  {{input
+    type="email"
+    class="form-control form-control-lg"
+    id="username"
+    value=username
+    placeholder="Username"
+    required=true
+  }}
+  {{input
+    type="password"
+    class="form-control form-control-lg"
+    id="password"
+    value=password
+    placeholder="Passwort"
+    required=true
+  }}
+
+</div>
+<div class="button-wrapper">
+  <button {{action 'clickAction'}} type="submit" class="login-button">Login</button>
+</div>

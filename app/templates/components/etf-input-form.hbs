@@ -1,0 +1,24 @@
+<div class="form">
+  {{input
+    type="text"
+    class="form-control form-control-lg"
+    id="title"
+    value=title
+    placeholder="Begriff"
+    required=true
+  }}
+  {{textarea
+    class="form-control form-control-lg"
+    id="desc"
+    rows="10"
+    value=desc
+    placeholder="Beschreibung"
+    required=true
+  }}
+</div>
+<div class="button-wrapper">
+  <button {{action 'clickAction'}} type="submit" class="save-button">{{name}}</button>
+  {{#if deleteAction}}
+    <button {{action 'deleteAction'}} class="delete-button">Löschen</button>
+  {{/if}}
+</div>

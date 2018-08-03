@@ -1,0 +1,16 @@
+.message-wrapper {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  @extend %flex-c;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+#success {
+  color: lightgreen;
+  border: 2px dashed lightgreen;
+}
+#error {
+  color: pink;
+  border: 2px dashed pink;
+}

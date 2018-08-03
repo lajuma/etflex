@@ -1,0 +1,99 @@
+/**
+ * import general and resetter styles
+ *
+ **/
+@import "mixins";
+@import "reset";
+
+
+/**
+ * main app styles
+ *
+ **/
+.app {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+    "header nav"
+    "sidebar main"
+    "footer main";
+  grid-template-rows: 100px 1fr 50px;
+  grid-template-columns: 30% 1fr;
+
+  @media screen and (max-width: 767px) {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+    grid-template-rows: 30px 90px 1fr 30px;
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    grid-area: header;
+    @extend %flex-c;
+    background-color: $main-color;
+
+    .title {
+      color: white;
+      font-size: 2em;
+
+      @media screen and (max-width: 767px) {
+        font-size: 1em;
+      }
+    }
+  }
+
+  nav {
+    grid-area: nav;
+    @extend %flex-v;
+
+    @media screen and (max-width: 768px){
+      background-color: $main-color;
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding-bottom: 10px;
+    }
+  }
+
+  main {
+    grid-area: main;
+    margin: $main-margin;
+    overflow-y: scroll;
+
+    @media screen and (max-width: 480px) {
+      margin: 10px;
+    }
+  }
+
+  footer {
+    grid-area: footer;
+    @extend %flex-c;
+    font-size: 0.8em;
+    color: grey;
+    background-color: lightgrey;
+    border-top: 1px solid #c4c4c4;
+    position: relative;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: $main-color;
+  }
+}
+
+
+/**
+ * import component styles
+ *
+ **/
+@import "components/etf-term-table";
+@import "components/etf-search";
+@import "components/etf-input-form";
+@import "components/etf-message";

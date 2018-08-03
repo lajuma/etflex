@@ -1,0 +1,17 @@
+{{#unless (media 'isMobile')}}
+  <aside class="sidebar">
+    {{outlet}}
+  </aside>
+{{/unless}}
+
+<nav>
+  {{etf-search value=filter}}
+</nav>
+
+<main role="main">
+  {{#if filter}}
+    {{etf-term-table terms=filteredTerms filter=filter}}
+  {{else}}
+    {{etf-term-table terms=sortedTerms filter=filter}}
+  {{/if}}
+</main>
