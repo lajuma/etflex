@@ -14,12 +14,14 @@ export default Controller.extend({
             email: username,
             password: password,
           }).then((data) => {
+            console.log(data);
             this.transitionToRoute('dictionary.switch.new');
           });
     },
 
     logout() {
       this.get('session').close();
+      this.transitionToRoute('dictionary.switch');
     },
 
 },

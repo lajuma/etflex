@@ -25,11 +25,11 @@ textarea {
 
 button {
   height: 50px;
-  width: 100px;
+  min-width: 100px;
   background-color: white;
   color: $main-color;
   font-size: 16px;
-  margin-top: 6px;
+  margin-top: 10px;
   align-self: right;
   cursor: pointer;
 
@@ -38,4 +38,11 @@ button {
 a {
   color: $main-color;
   text-decoration: none;
+}
+
+.logout-link {
+  color: white;
+  text-decoration: underline;
+  text-align: right;
+  font-size: 0.8em;
 }

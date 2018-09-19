@@ -86,6 +86,12 @@
     grid-area: sidebar;
     background-color: $main-color;
   }
+
+  .logout {
+    display: flex;
+    justify-content: flex-end;
+    margin: $main-margin;
+  }
 }
 
 
@@ -97,3 +103,4 @@
 @import "components/etf-search";
 @import "components/etf-input-form";
 @import "components/etf-message";
+@import "components/etf-login-form";

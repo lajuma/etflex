@@ -1,4 +1,5 @@
-etf-input-form {
+etf-login-form {
+
   color: white;
   margin: $main-margin;
   display: flex;
@@ -10,9 +11,12 @@ etf-input-form {
   }
 
   .form {
-    input, textarea {
+    input {
       width: -webkit-fill-available;
       resize: vertical;
+      &:first-child {
+        margin-bottom: 10px;
+      }
     }
   }
 }

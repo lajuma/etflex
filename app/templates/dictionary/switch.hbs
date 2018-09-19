@@ -1,6 +1,8 @@
 {{#if session.isAuthenticated}}
   {{outlet}}
-  <button {{action 'logout'}} type="submit" class="logout-button">Logout</button>
+  <div class="logout">
+    <a href='#' class="logout-link" {{action 'logout'}}>Logout</a>
+  </div>
 {{else}}
   {{etf-login-form username=username password=password clickAction=(action 'login' username password)}}
 {{/if}}
